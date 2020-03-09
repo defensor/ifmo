@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Maged LT Bold";
+    src: url("./fonts/Maged LT Bold/Maged LT Bold.eot");
+    /* IE9*/
+    src: url("./fonts/Maged LT Bold/Maged LT Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Maged LT Bold/Maged LT Bold.woff2") format("woff2"), /* chrome、firefox */
+    url("./fonts/Maged LT Bold/Maged LT Bold.woff") format("woff"), /* chrome、firefox */
+    url("./fonts/Maged LT Bold/Maged LT Bold.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./fonts/Maged LT Bold/Maged LT Bold.svg#Maged LT Bold") format("svg");
+    /* iOS 4.1- */
+}
+
+@font-face {
+    font-family: "Pragmatica";
+    src: url("./fonts/Pragmatica/Pragmatica.eot");
+    /* IE9*/
+    src: url("./fonts/Pragmatica/Pragmatica.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Pragmatica/Pragmatica.woff2") format("woff2"), /* chrome、firefox */
+    url("./fonts/Pragmatica/Pragmatica.woff") format("woff"), /* chrome、firefox */
+    url("./fonts/Pragmatica/Pragmatica.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./fonts/Pragmatica/Pragmatica.svg#Pragmatica") format("svg");
+    /* iOS 4.1- */
+}
+
+body {
+    background-color: #232323;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    font-family: "Pragmatica";
+}
+
+h1 {
+    font-family: "Maged LT Bold";
+    text-align: center;
+    line-height: 1;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+h2 {
+    color: #9295a4;
+    font-family: "Maged LT Bold";
+    line-height: 1;
+    font-weight: lighter;
+    font-size: larger;
+    width: 400px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    border-bottom: 1px solid #9295a4;
+}
+
+h3.byline {
+    color: #9295a4;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+p {
+    font-size: large;
+    font-weight: bolder;
+}
+
+div.content {
+    background: rgb(31, 37, 53);
+    background: linear-gradient(153deg, rgba(31, 37, 53, 1) 0%, rgba(44, 55, 77, 1) 50%, rgba(59, 78, 108, 1) 100%);
+    width: 630px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.image {
+    background-image: url("./images/soccer.jpeg");
+    background-position: center;
+    background-size: 100% auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 250px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 670px;
+}
+
+p.caption {
+    text-align: left;
+    font-family: "Maged LT Bold";
+    color: black;
+    opacity: 0.7;
+    font-size: normal;
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 1;
+    background-color: whitesmoke;
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+img.writer-img {
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin-right: 15px;
+    box-shadow: 5px 0 10px 0 #0c0232;
+}
