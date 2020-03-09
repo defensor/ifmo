@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>JS Lab 1</title>
+</head>
+
+<body>
+    <script>
+        // Header
+        document.write("<h1>First JS Lab</h1>");
+        document.write("<p>Message</p>".link("#message_anchor"));
+        document.write("<p>URL</p>".link("#url_anchor"));
+        document.write("<p>Images</p>".link("#counters_anchor"));
+        document.write("<p>Counters</p>".link("#counters_anchor"));
+
+        // Message
+        document.write("<h2>Message</h2>".anchor("message_anchor"));
+        var str = "After lab css-2 I drunk a lot of beer, and now I feel awful =O";
+        document.write(str);
+        document.write("<p>Word count: " + str.split(" ").length + "</p>");
+        document.write("<p>Letter count: " + str.length + "</p>");
+
+        // URL
+        var url = new URL(window.location);
+        var proto = url.protocol;
+        var file_path = url.pathname;
+        var file_name = file_path.split("/").pop().split(".")[0];
+        var file_ext = file_path.split(".").pop();
+        document.write("<h2>URL</h2>".anchor("url_anchor"));
+        document.write("<p>URL: " + url.href + "</p>");
+        document.write("<p>URL proto: " + proto + "</p>");
+        document.write("<p>File name: " + file_name + "</p>");
+        document.write("<p>File ext: " + file_ext + "</p>");
+
+        document.write("<p>Args: </p>");
+        var args = url.searchParams;
+        document.write("<ul>");
+        for (let [name, value] of args) {
+            document.write("<li>" + name + "=" + value + "</li>");
+        }
+        document.write("</ul>");
+
+        // Images
+        document.write("<h2>Images</h2>".anchor("images_anchor"));
+        var img = new Image();;
+        img.src = "./images/kavai.png";
+        img.id = "kavai_tyan";
+        img.style.width = "256px";
+        img.style.height = "286px";
+        document.write(img.outerHTML);
+
+        var img = new Image();
+        img.src = "./images/neko.png";
+        img.id = "neko_tyan";
+        img.style.width = "231px";
+        img.style.height = "286px";
+        document.write(img.outerHTML);
+
+        // Counters
+        document.write("<h2>Counters</h2>".anchor("counters_anchor"));
+        var anchors_count = document.anchors.length;
+        var links_count = document.links.length;
+        document.write("<p>Anchor count: " + anchors_count + "</p>");
+        document.write("<p>Links count: " + links_count + "</p>");
+
+        var first_anchor = document.anchors[0];
+        document.write("<p>First achor content: " + first_anchor.innerHTML + "</p>");
+
+        var images_count = document.images.length;
+        document.write("<p>Images count: " + images_count + "</p>");
+
+        var first_image_width = document.images[0].style.width;
+        document.write("<p>First image width: " + first_image_width + "</p>");
+
+        var max_images_width = Math.max(...[...Array(document.images.length).keys()].map(index => parseInt(document.images[index].style.width)));
+        document.write("<p>Max image width: " + max_images_width + "px </p>");
+
+        var sum_images_height = [...Array(document.images.length).keys()].map(index => parseInt(document.images[index].style.width)).reduce(function(sum, current) {
+            return sum + current;
+        }, 0);
+        document.write("<p>Sum of images height: " + max_images_width + "px </p>");
+    </script>
+</body>
+
+</html>
