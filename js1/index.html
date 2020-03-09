@@ -12,6 +12,7 @@
         document.write("<p>URL</p>".link("#url_anchor"));
         document.write("<p>Images</p>".link("#counters_anchor"));
         document.write("<p>Counters</p>".link("#counters_anchor"));
+        document.write("<p>Forms</p>".link("#forms_anchor"));
 
         // Message
         document.write("<h2>Message</h2>".anchor("message_anchor"));
@@ -42,7 +43,7 @@
 
         // Images
         document.write("<h2>Images</h2>".anchor("images_anchor"));
-        var img = new Image();;
+        var img = new Image();
         img.src = "./images/kavai.png";
         img.id = "kavai_tyan";
         img.style.width = "256px";
@@ -79,6 +80,306 @@
             return sum + current;
         }, 0);
         document.write("<p>Sum of images height: " + max_images_width + "px </p>");
+
+
+        // Forms
+        document.write("<h2>Forms</h2>".anchor("forms_anchor"));
+        document.write("<p>Enter your login and password:</p>");
+        var form = document.createElement('form');
+        form.name = "credentials";
+        form.id = "creds"; {
+            let login = document.createElement("input");
+            login.type = "text";
+            login.name = "login";
+            login.placeholder = "login";
+
+            let password = document.createElement("input");
+            password.type = "password";
+            password.name = "password";
+            password.placeholder = "password";
+
+            let email = document.createElement("input");
+            email.type = "email";
+            email.name = "email";
+            email.placeholder = "username@example.org";
+
+            form.appendChild(login);
+            form.appendChild(password);
+            form.appendChild(email);
+        }
+        document.body.append(form);
+
+        document.write("<p>What is your name?</p>");
+        var form = document.createElement('form');
+        form.name = "full_name";
+        form.id = "name"; {
+            let firstname = document.createElement("input");
+            firstname.type = "text";
+            firstname.name = "firstname";
+            firstname.placeholder = "first name";
+
+            let surname = document.createElement("input");
+            surname.type = "text";
+            surname.name = "surname";
+            surname.placeholder = "surname"
+
+            let patronymic = document.createElement("input");
+            patronymic.type = "text";
+            patronymic.name = "patronymic";
+            patronymic.placeholder = "patronymic"
+
+            form.appendChild(firstname);
+            form.appendChild(surname);
+            form.appendChild(patronymic);
+        }
+        document.body.append(form);
+
+        document.write("<p>Set your account preferences:</p>");
+        var form = document.createElement('form');
+        form.name = "account_preferences";
+        form.id = "account"; {
+            let img = document.createElement("input");
+            img.type = "file";
+            img.name = "icon";
+
+            let background_color = document.createElement("input");
+            background_color.type = "color";
+            background_color.name = "back_color";
+
+            form.appendChild(img);
+            form.appendChild(background_color);
+        }
+        document.body.append(form);
+
+        document.write("<p>What is your favourite anime?</p>");
+        var form = document.createElement('form');
+        form.name = "best_anime";
+        form.id = "anime"; {
+            let radio1 = document.createElement("input");
+            radio1.type = "radio";
+            radio1.name = "fav_anime";
+            radio1.value = "JoJo ;]-<"
+
+            let radio2 = document.createElement("input");
+            radio2.type = "radio";
+            radio2.name = "fav_anime";
+            radio2.value = "Naruto [-=*=-]"
+
+            let radio3 = document.createElement("input");
+            radio3.type = "radio";
+            radio3.name = "fav_anime";
+            radio3.value = "Berserk <====I-"
+
+            form.appendChild(radio1);
+            form.appendChild(radio2);
+            form.appendChild(radio3);
+        }
+        document.body.append(form);
+
+        document.write("<p>What is your favourite anime character?</p>");
+        var form = document.createElement('form');
+        form.name = "favourite_characters";
+        form.id = "characters"; {
+            let name = document.createElement("input");
+            name.type = "text";
+            name.name = "fullname";
+
+            let anime = document.createElement("input");
+            anime.type = "text";
+            anime.name = "anime";
+
+            form.appendChild(name);
+            form.appendChild(anime);
+        }
+        document.body.append(form);
+
+        document.write("<p>Choose your favourite wifu:</p>")
+        var form = document.createElement('form');
+        form.name = "my_favourite_wifu";
+        form.id = "wifu"; {
+            let img = document.createElement("input");
+            img.type = "image";
+            img.name = "image";
+            img.src = "./images/top_wifu.jpg"
+            img.height = 300;
+            img.width = 300;
+
+            let description = document.createElement("input");
+            description.type = "text";
+            description.name = "description";
+            description.placeholder = "I love Ram because...";
+
+            form.appendChild(img);
+            form.appendChild(description);
+        }
+        document.body.append(form);
+
+        document.write("<p>What kind of furry you like?</p>")
+        var form = document.createElement('form');
+        form.name = "furry_chart";
+        form.id = "furry"; {
+            let low = document.createElement("input");
+            low.type = "image";
+            low.name = "low";
+            low.src = "./images/furry_low.jpg"
+            low.height = 200;
+            low.width = 90;
+
+            let medium = document.createElement("input");
+            medium.type = "image";
+            medium.name = "medium";
+            medium.src = "./images/furry_medium.jpg"
+            medium.height = 200;
+            medium.width = 90;
+
+            let hight = document.createElement("input");
+            hight.type = "image";
+            hight.name = "hight";
+            hight.src = "./images/furry_hight.jpg"
+            hight.height = 200;
+            hight.width = 90;
+
+            let full = document.createElement("input");
+            full.type = "image";
+            full.name = "full";
+            full.src = "./images/furry_full.jpg"
+            full.height = 200;
+            full.width = 90;
+
+            form.appendChild(low);
+            form.appendChild(medium);
+            form.appendChild(hight);
+            form.appendChild(full);
+        }
+        document.body.append(form);
+
+        document.write("<p>What is your favourite manga?</p>");
+        var form = document.createElement('form');
+        form.name = "about_manga";
+        form.id = "manga"; {
+            let date = document.createElement("input");
+            date.type = "date";
+            date.name = "date";
+
+            let genre = document.createElement("input");
+            genre.type = "text";
+            genre.name = "genre";
+
+            form.appendChild(date);
+            form.appendChild(genre);
+        }
+        document.body.append(form);
+
+        document.write("<p>What best 2d/3d?</p>");
+        var form = document.createElement('form');
+        form.name = "whatbest_2d3d";
+        form.id = "whatbest"; {
+            let best_2d = document.createElement("input");
+            best_2d.type = "radio";
+            best_2d.name = "whats_best";
+            best_2d.checked = true;
+
+            let best_3d = document.createElement("input");
+            best_3d.type = "radio";
+            best_3d.name = "whats_best";
+            best_3d.disabled = true;
+
+            form.appendChild(best_2d);
+            form.appendChild(best_3d);
+        }
+        document.body.append(form);
+
+        document.write("<p>Feedback</p>");
+        var form = document.createElement('form');
+        form.name = "feedback";
+        form.id = "fb"; {
+            let mark = document.createElement("input");
+            mark.type = "range";
+            mark.name = "mark";
+            mark.min = 9;
+            mark.max = 10;
+            mark.step = 1;
+
+            let description = document.createElement("input");
+            description.type = "text";
+            description.name = "description";
+
+            form.appendChild(mark);
+            form.appendChild(description);
+        }
+        document.body.append(form);
+        for (let form of document.forms) {
+            let button_formname = document.createElement("input");
+            button_formname.type = "button";
+            button_formname.name = "formname";
+            button_formname.value = "Показать имя формы";
+            button_formname.onclick = function() {
+                alert(this.form.name)
+            };
+            button_formname.style.padding = 10;
+            button_formname.style.paddingLeft = 30;
+            button_formname.style.backgroundImage = "url(./icons/button_name.png)";
+            button_formname.style.borderRadius = "10px";
+            button_formname.style.backgroundPosition = "left top";
+            button_formname.style.backgroundRepeat = "no-repeat";
+
+            let button_own_id = document.createElement("input");
+            button_own_id.type = "button";
+            button_own_id.name = "formid";
+            button_own_id.value = "Принадлежность";
+            button_own_id.onclick = function() {
+                alert(this.form.id)
+            };
+            button_own_id.style.padding = 10;
+            button_own_id.style.paddingLeft = 30;
+            button_own_id.style.backgroundImage = "url(./icons/button_id.png)";
+            button_own_id.style.borderRadius = "10px";
+            button_own_id.style.backgroundPosition = "left top";
+            button_own_id.style.backgroundRepeat = "no-repeat";
+
+            let button_reset = document.createElement("input");
+            button_reset.type = "button";
+            button_reset.name = "reset_fields";
+            button_reset.value = "Сбросить";
+            button_reset.onclick = function() {
+                this.form.reset()
+            };
+            button_reset.style.padding = 10;
+            button_reset.style.paddingLeft = 30;
+            button_reset.style.backgroundImage = "url(./icons/button_reset.png)";
+            button_reset.style.borderRadius = "10px";
+            button_reset.style.backgroundPosition = "left top";
+            button_reset.style.backgroundRepeat = "no-repeat";
+
+            let button_count_fields = document.createElement("input");
+            button_count_fields.type = "button";
+            button_count_fields.name = "count_fields";
+            button_count_fields.value = "Показать количество полей";
+            button_count_fields.onclick = function() {
+                alert(this.form.length)
+            };
+            button_count_fields.style.padding = 10;
+            button_count_fields.style.paddingLeft = 30;
+            button_count_fields.style.backgroundImage = "url(./icons/button_count.png)";
+            button_count_fields.style.borderRadius = "10px";
+            button_count_fields.style.backgroundPosition = "left top";
+            button_count_fields.style.backgroundRepeat = "no-repeat";
+
+            form.appendChild(button_formname);
+            form.appendChild(button_own_id);
+            form.appendChild(button_reset);
+            form.appendChild(button_count_fields);
+
+            form.style.borderStyle = "solid";
+            form.style.borderWidth = "thin";
+            form.style.width = 300;
+        }
+
+
+        even_form_names = [...Array(document.forms.length).keys()].filter(index => {
+            return index % 2
+        }).map(index => document.forms[index].name);
+        document.write("<p>Even form names: " + even_form_names + "</p>");
     </script>
 </body>
 
