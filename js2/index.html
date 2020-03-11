@@ -200,20 +200,21 @@
                                     let t = document.getElementById("dataTable");
                                     let randomRowId = Math.floor(Math.random() * (t.childNodes.length - 1));
                                     let randomColumnId = Math.floor(Math.random() * t.childNodes[1].childNodes.length);
+                                    let randomElem = t.childNodes[randomRowId + 1].childNodes[randomColumnId];
 
                                     let method = Math.floor(Math.random() * 4);
-                                    alert("row:" + randomRowId + "     column:" + randomColumnId + "     method:" + method);
+                                    //alert("row:" + randomRowId + "     column:" + randomColumnId + "     method:" + method);
                                     if (method == 0) {
                                         let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-                                        document.getElementById("td_" + randomRowId + "_" + randomColumnId).style.backgroundColor = randomColor;
+                                        randomElem.style.backgroundColor = randomColor;
                                     } else if (method == 1) {
                                         let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-                                        document.getElementById("td_" + randomRowId + "_" + randomColumnId).style.color = randomColor;
+                                        randomElem.style.color = randomColor;
                                     } else if (method == 2) {
                                         let randomFontSize = 15 + Math.floor(Math.random() * (25 - 15));
-                                        document.getElementById("td_" + randomRowId + "_" + randomColumnId).style.fontSize = toString(randomFontSize) + "pt";
+                                        randomElem.style.fontSize = toString(randomFontSize) + "pt";
                                     } else if (method == 3) {
-                                        document.getElementById("td_" + randomRowId + "_" + randomColumnId).innerHTML = ''; {
+                                        randomElem.innerHTML = ''; {
                                             let subDiv = document.createElement("div");
                                             subDiv.className = "SaveDiv";
                                             subDiv.style.borderWidth = 1;
@@ -239,7 +240,7 @@
                                                 subForm.appendChild(butSave);
                                                 subDiv.appendChild(subForm);
                                             }
-                                            document.getElementById("td_" + randomRowId + "_" + randomColumnId).appendChild(subDiv);
+                                            randomElem.appendChild(subDiv);
                                         }
                                     }
                                 }
